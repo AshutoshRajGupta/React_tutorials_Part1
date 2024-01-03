@@ -1,0 +1,20 @@
+import React from "react";
+import LineItem from "./LineItem";
+
+const ItemList = ({ items, handleDelete, handleCheck }) => {
+  return (
+    <ul>
+      {items.map((item) => (
+        <LineItem
+          key={item.id}
+          item={item}
+          handleCheck={handleCheck}
+          handleDelete={handleDelete}
+          //   list should have a unique "key" prop.
+        />
+      ))}
+    </ul>
+  );
+};
+
+export default ItemList;
